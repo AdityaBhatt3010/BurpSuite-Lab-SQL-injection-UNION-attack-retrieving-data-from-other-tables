@@ -4,6 +4,8 @@
 
 This PortSwigger lab contains a classic **UNION-based SQL injection** inside the *product category filter*, allowing us to enumerate tables, extract columns, dump usernames and passwords, and finally log in as the administrator.
 
+[Lab Link](https://portswigger.net/web-security/sql-injection/union-attacks/lab-retrieve-data-from-other-tables) <br/>
+
 ![Cover](SQLi__PoC/Cover.jpeg)
 
 ---
