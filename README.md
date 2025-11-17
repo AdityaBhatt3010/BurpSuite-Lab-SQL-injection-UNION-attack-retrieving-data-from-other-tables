@@ -34,10 +34,6 @@ This lab demonstrates all three phases: **column enumeration → table discovery
 
 # 🧬 Step-By-Step Proof-of-Concept
 
-Below are the exact actions performed, each mapped to a screenshot stored in the same folder **SQLi__PoC**.
-
----
-
 ## **1. Open the Lab and Select a Category (e.g., Gifts)**
 
 Captured the request in Burp to identify the injectable parameter.
