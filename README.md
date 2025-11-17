@@ -183,7 +183,7 @@ Visiting My Account after login confirms the challenge is completed.
 
 This lab ties together key UNION SQLi concepts: enumeration, extraction, and account takeover. A perfect warm-up before exploiting more advanced cases like blind SQLi or type-mismatch unions.
 
-Stay sharp & stay offensive.
+Stay sharp & stay offensive. <br/>
 — **Aditya Bhatt** 🔥
 
 ---
