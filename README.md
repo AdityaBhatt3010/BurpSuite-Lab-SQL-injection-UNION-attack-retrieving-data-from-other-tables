@@ -137,9 +137,9 @@ Payload:
 
 Response shows:
 
-administrator – fac5uow76djah23ciyho
-carlos – edexxhcvgv52tv9wretc
-wiener – 2i6gxhulbgj02n5cc2k5
+administrator – fac5uow76djah23ciyho <br/>
+carlos – edexxhcvgv52tv9wretc <br/>
+wiener – 2i6gxhulbgj02n5cc2k5 <br/>
 
 ![Step 6](SQLi__PoC/7.png)
 
@@ -152,8 +152,8 @@ The lab explicitly wants us to extract creds → login as administrator.
 
 Use:
 
-username: administrator
-password: fac5uow76djah23ciyho
+username: administrator <br/>
+password: fac5uow76djah23ciyho <br/>
 
 ![Step 7](SQLi__PoC/8.png)
 
